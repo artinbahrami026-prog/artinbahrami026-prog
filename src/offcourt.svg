@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-label="Off the keyboard: volleyball libero, 2nd at Canadian Nationals, Ontario All-Star, 2x Ontario champion, York University practice squad, 2x regional chess champion, DECA regional champion.">
+  <style>
+    {{FONT:serif,serif-italic,mono,grotesk}}
+    .serif { font-family: 'Instrument Serif', serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .grot { font-family: 'Space Grotesk', sans-serif; }
+    .label { font-size: 15px; font-weight: 500; letter-spacing: 3.5px; fill: #8c8b96; }
+    .big { font-size: 104px; fill: #f3efe6; letter-spacing: -2px; }
+    .sub { font-size: 16px; fill: #8c8b96; }
+    .num { font-size: 44px; fill: #f3efe6; }
+    .cap { font-size: 11.5px; font-weight: 700; letter-spacing: 1.8px; fill: #8c8b96; }
+    .fb { transform-box: fill-box; }
+
+    .stat { opacity: 0; animation: up .8s cubic-bezier(.2,.8,.2,1) both; }
+    .a1 { animation-delay: .2s; } .a2 { animation-delay: .32s; } .a3 { animation-delay: .44s; }
+    .a4 { animation-delay: .56s; } .a5 { animation-delay: .68s; } .a6 { animation-delay: .8s; }
+    @keyframes up { from { opacity: 0; transform: translateY(22px); filter: blur(5px); } to { opacity: 1; transform: none; filter: blur(0); } }
+
+    .bounce { animation: bounce 1.3s infinite; }
+    @keyframes bounce {
+      0% { transform: translateY(-120px); animation-timing-function: cubic-bezier(.55,0,1,.45); }
+      50% { transform: translateY(0); animation-timing-function: cubic-bezier(0,.55,.45,1); }
+      100% { transform: translateY(-120px); }
+    }
+    .squash { transform-origin: 50% 100%; animation: squash 1.3s infinite; }
+    @keyframes squash { 0%,44%,56%,100% { transform: scale(1,1); } 50% { transform: scale(1.14,.84); } }
+    .spin { transform-origin: 50% 50%; animation: spin 2.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .shadow { transform-origin: 50% 50%; animation: shadow 1.3s infinite; }
+    @keyframes shadow {
+      0% { transform: scale(.45); opacity: .25; animation-timing-function: cubic-bezier(.55,0,1,.45); }
+      50% { transform: scale(1); opacity: .7; animation-timing-function: cubic-bezier(0,.55,.45,1); }
+      100% { transform: scale(.45); opacity: .25; }
+    }
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="1200" height="330" rx="28"/></clipPath>
+    <clipPath id="ball"><circle cx="0" cy="0" r="44"/></clipPath>
+    <radialGradient id="glow"><stop offset="0" stop-color="#f4a338" stop-opacity=".18"/><stop offset="1" stop-color="#f4a338" stop-opacity="0"/></radialGradient>
+    <radialGradient id="shade" cx=".35" cy=".3" r=".75"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".35"/></radialGradient>
+    <path id="panel" d="M-60,4 C-26,-18 26,-18 60,4 L60,24 C26,2 -26,2 -60,24 Z"/>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="330" fill="#0b0c11"/>
+    <circle cx="1050" cy="300" r="260" fill="url(#glow)"/>
+    <!-- court line -->
+    <line x1="990" y1="276" x2="1200" y2="276" stroke="#f3efe6" stroke-opacity=".1" stroke-width="2"/>
+  </g>
+  <rect x=".75" y=".75" width="1198.5" height="328.5" rx="28" fill="none" stroke="#262733" stroke-width="1.5"/>
+
+  <text x="60" y="66" class="mono label">OFF THE KEYBOARD</text>
+  <text x="52" y="184" class="serif big">Libero<tspan style="font-style:italic;fill:#f4a338">.</tspan></text>
+  <text x="60" y="226" class="grot sub">Leaside Knights U18</text>
+  <text x="60" y="250" class="grot sub">York University men's practice squad</text>
+
+  <!-- stats -->
+  <g class="stat a1 fb"><text x="420" y="150" class="serif num">2nd</text><text x="422" y="176" class="mono cap">CANADIAN NATIONALS</text></g>
+  <g class="stat a2 fb"><text x="620" y="150" class="serif num">2×</text><text x="622" y="176" class="mono cap">ONTARIO CHAMPION</text></g>
+  <g class="stat a3 fb"><text x="820" y="150" class="serif num">All-Star</text><text x="822" y="176" class="mono cap">ONTARIO</text></g>
+  <line x1="420" y1="206" x2="960" y2="206" stroke="#262733" stroke-width="1.5"/>
+  <g class="stat a4 fb"><text x="420" y="268" class="serif num">2×</text><text x="422" y="294" class="mono cap">REGIONAL CHESS, IRAN</text></g>
+  <g class="stat a5 fb"><text x="620" y="268" class="serif num">DECA</text><text x="622" y="294" class="mono cap">REGIONAL CHAMPION</text></g>
+  <g class="stat a6 fb"><text x="820" y="268" class="serif num">Pres.</text><text x="822" y="294" class="mono cap">DECA CHAPTER</text></g>
+
+  <!-- volleyball -->
+  <g transform="translate(1080 276)">
+    <ellipse class="shadow fb" cx="0" cy="0" rx="40" ry="7" fill="#000"/>
+  </g>
+  <g transform="translate(1080 230)">
+    <g class="bounce">
+      <g class="squash fb">
+        <g class="spin fb">
+          <g clip-path="url(#ball)">
+            <circle r="44" fill="#f3efe6"/>
+            <use href="#panel" fill="#f4a338"/>
+            <use href="#panel" fill="#3d7fd6" transform="rotate(120)"/>
+            <use href="#panel" fill="#f4a338" transform="rotate(240)"/>
+            <circle r="44" fill="url(#shade)"/>
+          </g>
+          <circle r="44" fill="none" stroke="#0b0c11" stroke-opacity=".4" stroke-width="1.5"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

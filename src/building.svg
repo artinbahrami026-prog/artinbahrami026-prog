@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" role="img" aria-label="Now building: Rumy, the AI roommate for shared living. Avara, AI employees for real businesses. OCO, an AI accountant.">
+  <style>
+    {{FONT:serif,mono,grotesk}}
+    .serif { font-family: 'Instrument Serif', serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .grot { font-family: 'Space Grotesk', sans-serif; }
+    .label { font-size: 15px; font-weight: 500; letter-spacing: 3.5px; fill: #8c8b96; }
+    .nm { font-size: 50px; fill: #f3efe6; letter-spacing: -.5px; }
+    .role { font-size: 12px; font-weight: 700; letter-spacing: 2px; }
+    .d { font-size: 17px; fill: #c9c6bd; }
+    .stack { font-size: 12.5px; fill: #6d6c77; }
+    .chip { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; }
+    .fb { transform-box: fill-box; }
+
+    .card { opacity: 0; animation: up .9s cubic-bezier(.2,.8,.2,1) both; }
+    .c1 { animation-delay: .15s; } .c2 { animation-delay: .35s; } .c3 { animation-delay: .55s; }
+    @keyframes up { from { opacity: 0; transform: translateY(34px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
+    .live { animation: blink 1.6s ease-in-out infinite; }
+    @keyframes blink { 50% { opacity: .25; } }
+    .float { animation: float 4s ease-in-out infinite; }
+    @keyframes float { 50% { transform: translateY(-6px) rotate(-3deg); } }
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="1200" height="430" rx="28"/></clipPath>
+    <clipPath id="k1"><rect x="48" y="104" width="352" height="286" rx="20"/></clipPath>
+    <clipPath id="k2"><rect x="424" y="104" width="352" height="286" rx="20"/></clipPath>
+    <clipPath id="k3"><rect x="800" y="104" width="352" height="286" rx="20"/></clipPath>
+    <clipPath id="ico"><rect x="76" y="132" width="58" height="58" rx="14"/></clipPath>
+    <radialGradient id="gY"><stop offset="0" stop-color="#f5e070" stop-opacity=".28"/><stop offset="1" stop-color="#f5e070" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gG"><stop offset="0" stop-color="#2fc79c" stop-opacity=".26"/><stop offset="1" stop-color="#2fc79c" stop-opacity="0"/></radialGradient>
+    <radialGradient id="gP"><stop offset="0" stop-color="#a78bfa" stop-opacity=".3"/><stop offset="1" stop-color="#a78bfa" stop-opacity="0"/></radialGradient>
+    <!-- a light that runs around each card's border -->
+    <linearGradient id="sweep" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3efe6" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#f3efe6" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#f3efe6" stop-opacity="0"/>
+      <animateTransform attributeName="gradientTransform" type="rotate" values="0 .5 .5;360 .5 .5" dur="6s" repeatCount="indefinite"/>
+    </linearGradient>
+  </defs>
+
+  <g clip-path="url(#card)"><rect width="1200" height="430" fill="#0b0c11"/></g>
+  <rect x=".75" y=".75" width="1198.5" height="428.5" rx="28" fill="none" stroke="#262733" stroke-width="1.5"/>
+  <text x="60" y="66" class="mono label">NOW BUILDING</text>
+  <circle class="live" cx="1128" cy="61" r="5" fill="#5ee38a"/>
+  <text x="1112" y="66" text-anchor="end" class="mono label" style="fill:#4f4e58">3 PRODUCTS IN FLIGHT</text>
+
+  <!-- Rumy -->
+  <g class="card c1 fb">
+    <rect x="48" y="104" width="352" height="286" rx="20" fill="#121319"/>
+    <g clip-path="url(#k1)"><circle cx="380" cy="110" r="220" fill="url(#gY)"/></g>
+    <rect x="48.75" y="104.75" width="350.5" height="284.5" rx="20" fill="none" stroke="#262733" stroke-width="1.5"/>
+    <rect x="48.75" y="104.75" width="350.5" height="284.5" rx="20" fill="none" stroke="url(#sweep)" stroke-width="1.5"/>
+    <g class="float fb">
+      <rect x="76" y="132" width="58" height="58" rx="14" fill="#f5e070"/>
+      <image href="{{IMG:rumy-icon-128.webp}}" x="76" y="132" width="58" height="58" clip-path="url(#ico)"/>
+    </g>
+    <rect x="270" y="146" width="104" height="26" rx="13" fill="#f5e070" fill-opacity=".12" stroke="#f5e070" stroke-opacity=".4"/>
+    <text x="322" y="163" text-anchor="middle" class="mono chip" fill="#f5e070">EARLY ACCESS</text>
+    <text x="74" y="250" class="serif nm">Rumy</text>
+    <text x="76" y="276" class="mono role" fill="#f5e070">CO-FOUNDER / CEO</text>
+    <text x="76" y="312" class="grot d">The AI roommate for dorms and</text>
+    <text x="76" y="334" class="grot d">shared homes. Fewer chore wars.</text>
+    <text x="76" y="368" class="mono stack">React Native · Expo · Firebase</text>
+  </g>
+
+  <!-- Avara -->
+  <g class="card c2 fb">
+    <rect x="424" y="104" width="352" height="286" rx="20" fill="#121319"/>
+    <g clip-path="url(#k2)"><circle cx="756" cy="110" r="220" fill="url(#gG)"/></g>
+    <rect x="424.75" y="104.75" width="350.5" height="284.5" rx="20" fill="none" stroke="#262733" stroke-width="1.5"/>
+    <rect x="424.75" y="104.75" width="350.5" height="284.5" rx="20" fill="none" stroke="url(#sweep)" stroke-width="1.5"/>
+    <g class="float fb" style="animation-delay:-1.3s">
+      <rect x="452" y="132" width="58" height="58" rx="14" fill="#10453e"/>
+      <!-- control-plane mark: a hub with orbiting agents -->
+      <circle cx="481" cy="161" r="7" fill="#f4f2ed"/>
+      <circle cx="481" cy="161" r="17" fill="none" stroke="#2fc79c" stroke-width="1.5" stroke-dasharray="3 4"/>
+      <g>
+        <circle cx="498" cy="161" r="3.5" fill="#2fc79c"/><circle cx="464" cy="161" r="3.5" fill="#2fc79c"/><circle cx="481" cy="144" r="3.5" fill="#2fc79c"/>
+        <animateTransform attributeName="transform" type="rotate" from="0 481 161" to="360 481 161" dur="8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+    <rect x="644" y="146" width="104" height="26" rx="13" fill="#2fc79c" fill-opacity=".12" stroke="#2fc79c" stroke-opacity=".4"/>
+    <text x="696" y="163" text-anchor="middle" class="mono chip" fill="#2fc79c">IN BUILD</text>
+    <text x="450" y="250" class="serif nm">Avara</text>
+    <text x="452" y="276" class="mono role" fill="#2fc79c">FOUNDER</text>
+    <text x="452" y="312" class="grot d">AI employees for real businesses.</text>
+    <text x="452" y="334" class="grot d">One place to run every agent.</text>
+    <text x="452" y="368" class="mono stack">Next.js · TypeScript · Drizzle</text>
+  </g>
+
+  <!-- OCO -->
+  <g class="card c3 fb">
+    <rect x="800" y="104" width="352" height="286" rx="20" fill="#121319"/>
+    <g clip-path="url(#k3)"><circle cx="1132" cy="110" r="220" fill="url(#gP)"/></g>
+    <rect x="800.75" y="104.75" width="350.5" height="284.5" rx="20" fill="none" stroke="#262733" stroke-width="1.5"/>
+    <rect x="800.75" y="104.75" width="350.5" height="284.5" rx="20" fill="none" stroke="url(#sweep)" stroke-width="1.5"/>
+    <g class="float fb" style="animation-delay:-2.6s">
+      <rect x="828" y="132" width="58" height="58" rx="14" fill="#2a1d4d"/>
+      <!-- tiny octopus -->
+      <g fill="none" stroke="#a78bfa" stroke-width="3" stroke-linecap="round">
+        <path d="M845,166 q-4,8 -9,10"><animate attributeName="d" values="M845,166 q-4,8 -9,10;M845,166 q-7,6 -8,13;M845,166 q-4,8 -9,10" dur="1.8s" repeatCount="indefinite"/></path>
+        <path d="M852,168 q0,9 -3,14"><animate attributeName="d" values="M852,168 q0,9 -3,14;M852,168 q-3,8 0,15;M852,168 q0,9 -3,14" dur="1.8s" begin="-.4s" repeatCount="indefinite"/></path>
+        <path d="M862,168 q0,9 3,14"><animate attributeName="d" values="M862,168 q0,9 3,14;M862,168 q3,8 0,15;M862,168 q0,9 3,14" dur="1.8s" begin="-.8s" repeatCount="indefinite"/></path>
+        <path d="M869,166 q4,8 9,10"><animate attributeName="d" values="M869,166 q4,8 9,10;M869,166 q7,6 8,13;M869,166 q4,8 9,10" dur="1.8s" begin="-1.2s" repeatCount="indefinite"/></path>
+      </g>
+      <ellipse cx="857" cy="156" rx="14" ry="13" fill="#8b5cf6"/>
+      <circle cx="852" cy="155" r="2.5" fill="#fff"/><circle cx="862" cy="155" r="2.5" fill="#fff"/>
+    </g>
+    <rect x="1020" y="146" width="104" height="26" rx="13" fill="#a78bfa" fill-opacity=".12" stroke="#a78bfa" stroke-opacity=".4"/>
+    <text x="1072" y="163" text-anchor="middle" class="mono chip" fill="#a78bfa">IN BUILD</text>
+    <text x="826" y="250" class="serif nm">OCO</text>
+    <text x="828" y="276" class="mono role" fill="#a78bfa">FOUNDER</text>
+    <text x="828" y="312" class="grot d">An AI accountant: a purple octopus</text>
+    <text x="828" y="334" class="grot d">that does your bookkeeping.</text>
+    <text x="828" y="368" class="mono stack">Next.js 15 · Supabase · Tailwind</text>
+  </g>
+</svg>

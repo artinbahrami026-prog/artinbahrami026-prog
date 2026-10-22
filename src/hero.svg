@@ -1,179 +1,144 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="Artin Bahrami, co-founder of Rumy, building the app every roommate needs">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="Artin Bahrami. From Tehran, based in Toronto. Founder, product designer, self-taught engineer.">
   <style>
-    {{FONT}}
-    text { font-family: 'Nunito', sans-serif; }
-    .ink { fill: #1a1a1a; }
-    .h1 { font-size: 68px; font-weight: 900; letter-spacing: -1.5px; }
-    .pill-t { font-size: 17px; font-weight: 800; }
-    .sub { font-size: 23px; font-weight: 700; fill: #4d4a42; }
-    .word { font-size: 38px; font-weight: 900; fill: #1a1a1a; letter-spacing: -0.5px; }
-    .btn-t { font-size: 18px; font-weight: 800; fill: #fff; }
-    .btn-u { font-size: 18px; font-weight: 800; fill: #f5e070; }
-    .chip-t { font-size: 15px; font-weight: 900; fill: #1a1a1a; }
-    .chip-s { font-size: 12px; font-weight: 700; fill: #7a7464; }
-    .cloud-t { font-size: 23px; font-weight: 900; fill: #1a1a1a; }
+    {{FONT:serif,serif-italic,mono,grotesk}}
+    .serif { font-family: 'Instrument Serif', serif; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .grot { font-family: 'Space Grotesk', sans-serif; }
+    .name { font-size: 158px; fill: #f3efe6; letter-spacing: -3px; }
+    .label { font-size: 15px; font-weight: 500; letter-spacing: 3.5px; fill: #8c8b96; }
+    .lead { font-size: 27px; font-weight: 400; fill: #c9c6bd; }
+    .word { font-size: 40px; font-style: italic; fill: #f3efe6; }
+    .city { font-size: 15px; font-weight: 700; letter-spacing: 2.5px; fill: #f3efe6; }
+    .coord { font-size: 13px; fill: #8c8b96; }
 
     .fb { transform-box: fill-box; }
-    .in1, .in2, .in3, .in4, .in5, .in6 { opacity: 0; animation: up .8s cubic-bezier(.2,.9,.25,1.15) both; }
-    .in1 { animation-delay: .05s; } .in2 { animation-delay: .2s; } .in3 { animation-delay: .35s; }
-    .in4 { animation-delay: .5s; } .in5 { animation-delay: .7s; } .in6 { animation-delay: .9s; }
-    @keyframes up { from { opacity: 0; transform: translateY(26px); } to { opacity: 1; transform: none; } }
+    .in { opacity: 0; animation: up 1s cubic-bezier(.2,.8,.2,1) both; }
+    .d1 { animation-delay: .1s; } .d2 { animation-delay: .3s; } .d3 { animation-delay: .5s; } .d4 { animation-delay: .75s; } .d5 { animation-delay: 1s; }
+    @keyframes up { from { opacity: 0; transform: translateY(30px); filter: blur(6px); } to { opacity: 1; transform: none; filter: blur(0); } }
 
-    .scribble { stroke-dasharray: 280; stroke-dashoffset: 280; animation: draw 1s ease-out 1.1s forwards; }
-    @keyframes draw { to { stroke-dashoffset: 0; } }
-
-    .w { opacity: 0; animation: rot 10s ease-in-out infinite both; }
-    .w2 { animation-delay: 2.5s; } .w3 { animation-delay: 5s; } .w4 { animation-delay: 7.5s; }
+    .w { opacity: 0; animation: rot 12s cubic-bezier(.6,0,.2,1) 1.2s infinite both; }
+    .w2 { animation-delay: 4.2s; } .w3 { animation-delay: 7.2s; } .w4 { animation-delay: 10.2s; }
     @keyframes rot {
-      0% { opacity: 0; transform: translateY(22px); }
-      4% { opacity: 1; transform: none; }
-      21% { opacity: 1; transform: none; }
-      25% { opacity: 0; transform: translateY(-22px); }
-      100% { opacity: 0; transform: translateY(-22px); }
+      0% { opacity: 0; transform: translateY(26px); filter: blur(6px); }
+      5% { opacity: 1; transform: none; filter: blur(0); }
+      21% { opacity: 1; transform: none; filter: blur(0); }
+      25%, 100% { opacity: 0; transform: translateY(-26px); filter: blur(6px); }
     }
 
-    .bob { animation: bob 3.4s ease-in-out infinite; }
-    @keyframes bob { 0%,100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-14px) rotate(-1.5deg); } }
-    .glow { transform-origin: center; animation: glow 2.2s ease-in-out infinite; }
-    @keyframes glow { 0%,100% { opacity: .35; transform: scale(.85); } 50% { opacity: .9; transform: scale(1.15); } }
+    .arc { stroke-dasharray: 1; stroke-dashoffset: 1; animation: draw 7s ease-in-out 1.4s infinite; }
+    @keyframes draw { 0% { stroke-dashoffset: 1; opacity: 1; } 55% { stroke-dashoffset: 0; opacity: 1; } 85% { stroke-dashoffset: 0; opacity: 1; } 100% { stroke-dashoffset: 0; opacity: 0; } }
 
-    .cloud { transform-origin: 100% 100%; animation: pop 7s cubic-bezier(.3,1.6,.5,1) 1.2s infinite both; }
-    @keyframes pop {
-      0% { opacity: 0; transform: scale(.2); }
-      7% { opacity: 1; transform: scale(1); }
-      88% { opacity: 1; transform: scale(1); }
-      94%,100% { opacity: 0; transform: scale(.2); }
-    }
-
-    .chipA { animation: up .8s cubic-bezier(.2,.9,.25,1.15) 1.5s both, floatA 4.6s ease-in-out 2.3s infinite; }
-    .chipB { animation: up .8s cubic-bezier(.2,.9,.25,1.15) 1.9s both, floatB 5.2s ease-in-out 2.7s infinite; }
-    @keyframes floatA { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
-    @keyframes floatB { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
-
-    .spark { transform-origin: 0 0; transform-box: view-box; animation: twinkle 2.6s ease-in-out infinite; }
-    .s2 { animation-delay: .7s; } .s3 { animation-delay: 1.3s; } .s4 { animation-delay: 1.9s; } .s5 { animation-delay: .4s; }
-    @keyframes twinkle { 0%,100% { transform: scale(.4) rotate(0deg); opacity: .3; } 50% { transform: scale(1) rotate(90deg); opacity: 1; } }
-
-    .shine { animation: shine 3.6s ease-in-out 2s infinite; }
-    @keyframes shine { 0% { transform: translateX(-120px) skewX(-20deg); } 45%,100% { transform: translateX(460px) skewX(-20deg); } }
-    .arrow { animation: nudge 1.6s ease-in-out infinite; }
-    @keyframes nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(5px); } }
+    .live { animation: blink 1.6s ease-in-out infinite; }
+    @keyframes blink { 50% { opacity: .25; } }
+    .tw { animation: tw 3s ease-in-out infinite; }
+    .t2 { animation-delay: .8s; } .t3 { animation-delay: 1.6s; } .t4 { animation-delay: 2.3s; }
+    @keyframes tw { 0%,100% { opacity: .15; } 50% { opacity: .9; } }
   </style>
-
   <defs>
-    <clipPath id="card"><rect x="3" y="3" width="1184" height="500" rx="34"/></clipPath>
-    <clipPath id="btn"><rect x="64" y="428" width="352" height="54" rx="27"/></clipPath>
-    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.6" fill="#e8c840" opacity=".45"/>
-    </pattern>
-    <path id="star" d="M0,-14 C2,-4 4,-2 14,0 C4,2 2,4 0,14 C-2,4 -4,2 -14,0 C-4,-2 -2,-4 0,-14Z"/>
+    <clipPath id="card"><rect x="0" y="0" width="1200" height="480" rx="28"/></clipPath>
+    <clipPath id="globe"><circle cx="935" cy="250" r="178"/></clipPath>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4a338"/><stop offset=".55" stop-color="#f07a5a"/><stop offset="1" stop-color="#7cc8ff"/>
+    </linearGradient>
+    <linearGradient id="route" gradientUnits="userSpaceOnUse" x1="1040" y1="0" x2="830" y2="0">
+      <stop offset="0" stop-color="#f4a338"/><stop offset="1" stop-color="#7cc8ff"/>
+    </linearGradient>
+    <radialGradient id="glowA"><stop offset="0" stop-color="#f4a338" stop-opacity=".22"/><stop offset="1" stop-color="#f4a338" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowB"><stop offset="0" stop-color="#7cc8ff" stop-opacity=".2"/><stop offset="1" stop-color="#7cc8ff" stop-opacity="0"/></radialGradient>
+    <radialGradient id="sphere" cx=".35" cy=".3" r=".8">
+      <stop offset="0" stop-color="#1b1d28"/><stop offset="1" stop-color="#0b0c11"/>
+    </radialGradient>
+    <path id="route-path" d="M1040,232 Q945,70 832,200"/>
   </defs>
 
-  <!-- card + offset shadow -->
-  <rect x="11" y="13" width="1184" height="500" rx="34" fill="#1a1a1a"/>
-  <rect x="3" y="3" width="1184" height="500" rx="34" fill="#fffdf4"/>
-
   <g clip-path="url(#card)">
-    <rect x="0" y="0" width="700" height="520" fill="url(#dots)"/>
-    <!-- morphing yellow blob -->
-    <path fill="#f5e070">
-      <animate attributeName="d" dur="11s" repeatCount="indefinite" calcMode="spline"
-        keySplines=".45 0 .55 1; .45 0 .55 1"
-        values="M770,0 C700,120 690,250 745,355 C790,440 725,490 705,520 L1200,520 L1200,0 Z;
-                M820,0 C735,105 775,245 705,345 C655,430 770,480 750,520 L1200,520 L1200,0 Z;
-                M770,0 C700,120 690,250 745,355 C790,440 725,490 705,520 L1200,520 L1200,0 Z"/>
-    </path>
-    <circle cx="1120" cy="470" r="120" fill="#e8c840" opacity=".55">
-      <animate attributeName="r" values="120;140;120" dur="8s" repeatCount="indefinite"/>
+    <rect width="1200" height="480" fill="#0b0c11"/>
+    <circle cx="120" cy="470" r="380" fill="url(#glowA)"/>
+    <circle cx="960" cy="220" r="330" fill="url(#glowB)">
+      <animate attributeName="r" values="330;360;330" dur="9s" repeatCount="indefinite"/>
     </circle>
-    <circle cx="905" cy="-20" r="90" fill="#fcefb4" opacity=".8">
-      <animate attributeName="cy" values="-20;0;-20" dur="9s" repeatCount="indefinite"/>
+
+    <!-- stars -->
+    <g fill="#f3efe6">
+      <circle class="tw" cx="640" cy="60" r="1.6"/><circle class="tw t2" cx="700" cy="420" r="1.3"/>
+      <circle class="tw t3" cx="1150" cy="80" r="1.8"/><circle class="tw t4" cx="1160" cy="430" r="1.4"/>
+      <circle class="tw t2" cx="560" cy="140" r="1.2"/><circle class="tw" cx="760" cy="40" r="1.2"/>
+      <circle class="tw t3" cx="1110" cy="300" r="1.1"/><circle class="tw t4" cx="610" cy="300" r="1.3"/>
+    </g>
+
+    <!-- globe -->
+    <circle cx="935" cy="250" r="178" fill="url(#sphere)"/>
+    <g clip-path="url(#globe)" fill="none" stroke="#7cc8ff" stroke-opacity=".16" stroke-width="1.2">
+      <ellipse cx="935" cy="250" rx="178" ry="30"/>
+      <ellipse cx="935" cy="190" rx="168" ry="27"/><ellipse cx="935" cy="310" rx="168" ry="27"/>
+      <ellipse cx="935" cy="130" rx="133" ry="22"/><ellipse cx="935" cy="370" rx="133" ry="22"/>
+      <ellipse cx="935" cy="85" rx="80" ry="13"/><ellipse cx="935" cy="415" rx="80" ry="13"/>
+      <!-- spinning meridians -->
+      <ellipse cx="935" cy="250" ry="178"><animate attributeName="rx" values="0;178;0" dur="12s" begin="0s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .58 1;.42 0 1 1"/></ellipse>
+      <ellipse cx="935" cy="250" ry="178"><animate attributeName="rx" values="0;178;0" dur="12s" begin="-2s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .58 1;.42 0 1 1"/></ellipse>
+      <ellipse cx="935" cy="250" ry="178"><animate attributeName="rx" values="0;178;0" dur="12s" begin="-4s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .58 1;.42 0 1 1"/></ellipse>
+      <ellipse cx="935" cy="250" ry="178"><animate attributeName="rx" values="0;178;0" dur="12s" begin="-6s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .58 1;.42 0 1 1"/></ellipse>
+      <ellipse cx="935" cy="250" ry="178"><animate attributeName="rx" values="0;178;0" dur="12s" begin="-8s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .58 1;.42 0 1 1"/></ellipse>
+      <ellipse cx="935" cy="250" ry="178"><animate attributeName="rx" values="0;178;0" dur="12s" begin="-10s" repeatCount="indefinite" calcMode="spline" keySplines="0 0 .58 1;.42 0 1 1"/></ellipse>
+    </g>
+    <circle cx="935" cy="250" r="178" fill="none" stroke="#7cc8ff" stroke-opacity=".35" stroke-width="1.5"/>
+    <circle cx="935" cy="250" r="198" fill="none" stroke="#f3efe6" stroke-opacity=".08" stroke-dasharray="2 8">
+      <animateTransform attributeName="transform" type="rotate" from="0 935 250" to="360 935 250" dur="60s" repeatCount="indefinite"/>
     </circle>
-  </g>
-  <rect x="3" y="3" width="1184" height="500" rx="34" fill="none" stroke="#1a1a1a" stroke-width="3"/>
 
-  <!-- left: pill -->
-  <g class="in1 fb">
-    <rect x="64" y="52" width="236" height="40" rx="20" fill="#fcefb4" stroke="#1a1a1a" stroke-width="2.5"/>
-    <use href="#star" xlink:href="#star" transform="translate(88 72) scale(.62)" fill="#1a1a1a"/>
-    <text x="104" y="78" class="pill-t ink">Co-founder of Rumy</text>
-  </g>
+    <!-- route: Tehran to Toronto -->
+    <use href="#route-path" fill="none" stroke="#f3efe6" stroke-opacity=".12" stroke-width="2" stroke-dasharray="3 7"/>
+    <path class="arc" d="M1040,232 Q945,70 832,200" pathLength="1" fill="none" stroke="url(#route)" stroke-width="3" stroke-linecap="round"/>
+    <g>
+      <path d="M8,0 L-7,-6 L-4,0 L-7,6 Z" fill="#f3efe6"/>
+      <animateMotion dur="7s" begin="1.4s" repeatCount="indefinite" rotate="auto" keyPoints="0;1;1" keyTimes="0;.55;1" calcMode="spline" keySplines=".45 0 .55 1;0 0 1 1">
+        <mpath href="#route-path"/>
+      </animateMotion>
+      <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;.02;.53;.58;1" dur="7s" begin="1.4s" repeatCount="indefinite"/>
+    </g>
 
-  <!-- headline -->
-  <text x="58" y="164" class="h1 ink in2 fb">Building the app</text>
-  <text x="58" y="236" class="h1 ink in3 fb">every roommate</text>
-  <g class="in4 fb">
-    <text x="58" y="308" class="h1" fill="#e8c840" stroke="#1a1a1a" stroke-width="2" paint-order="stroke" stroke-linejoin="round">needs.</text>
-    <path class="scribble" d="M64,330 C120,319 190,317 262,323" fill="none" stroke="#1a1a1a" stroke-width="5" stroke-linecap="round"/>
+    <!-- cities -->
+    <g>
+      <circle cx="1040" cy="232" r="5" fill="#f4a338"/>
+      <circle cx="1040" cy="232" r="5" fill="none" stroke="#f4a338" stroke-width="2">
+        <animate attributeName="r" values="5;22" dur="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="2.4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="1056" y="262" class="mono city">TEHRAN</text>
+      <text x="1056" y="282" class="mono coord">35.69°N 51.39°E</text>
+    </g>
+    <g>
+      <circle cx="832" cy="200" r="5" fill="#7cc8ff"/>
+      <circle cx="832" cy="200" r="5" fill="none" stroke="#7cc8ff" stroke-width="2">
+        <animate attributeName="r" values="5;22" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="1;0" dur="2.4s" begin="1.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="816" y="230" text-anchor="end" class="mono city">TORONTO</text>
+      <text x="816" y="250" text-anchor="end" class="mono coord">43.65°N 79.38°W</text>
+    </g>
   </g>
+  <rect x=".75" y=".75" width="1198.5" height="478.5" rx="28" fill="none" stroke="#262733" stroke-width="1.5"/>
 
-  <!-- rotating line -->
-  <text x="62" y="372" class="sub in5 fb">Rumy, your AI roommate, handles the</text>
+  <!-- left column -->
+  <g class="in d1 fb">
+    <circle class="live" cx="68" cy="66" r="5" fill="#5ee38a"/>
+    <text x="84" y="71" class="mono label">CURRENTLY BUILDING IN TORONTO</text>
+  </g>
+  <text x="54" y="208" class="serif name in d2 fb">Artin</text>
+  <text x="54" y="330" class="serif name in d3 fb" style="font-style:italic;fill:url(#sun)">Bahrami</text>
+
+  <text x="60" y="404" class="grot lead in d4 fb">I'm a</text>
   <g>
-    <g class="w w1 fb"><rect x="58" y="390" width="{{W1}}" height="18" rx="5" fill="#f5e070"/><text x="62" y="414" class="word">chores.</text></g>
-    <g class="w w2 fb"><rect x="58" y="390" width="{{W2}}" height="18" rx="5" fill="#f5e070"/><text x="62" y="414" class="word">bills.</text></g>
-    <g class="w w3 fb"><rect x="58" y="390" width="{{W3}}" height="18" rx="5" fill="#f5e070"/><text x="62" y="414" class="word">house rules.</text></g>
-    <g class="w w4 fb"><rect x="58" y="390" width="{{W4}}" height="18" rx="5" fill="#f5e070"/><text x="62" y="414" class="word">awkward talks.</text></g>
+    <text x="{{WX}}" y="406" class="serif word w w1 fb">founder.</text>
+    <text x="{{WX}}" y="406" class="serif word w w2 fb">product designer.</text>
+    <text x="{{WX}}" y="406" class="serif word w w3 fb">self-taught engineer.</text>
+    <text x="{{WX}}" y="406" class="serif word w w4 fb">volleyball libero.</text>
   </g>
 
-  <!-- CTA button -->
-  <g class="in6 fb">
-    <rect x="68" y="433" width="352" height="54" rx="27" fill="#e8c840"/>
-    <rect x="64" y="428" width="352" height="54" rx="27" fill="#1a1a1a"/>
-    <g clip-path="url(#btn)">
-      <rect class="shine" x="64" y="418" width="46" height="80" fill="#fff" opacity=".18"/>
-    </g>
-    <text x="94" y="461" class="btn-t">Join the waitlist</text>
-    <g class="arrow">
-      <path d="M252,455 h20 m-7,-7 l7,7 l-7,7" fill="none" stroke="#f5e070" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    <text x="284" y="461" class="btn-u">rumyapp.com</text>
+  <g class="in d5 fb">
+    <text x="60" y="446" class="mono label" style="font-size:13px">FROM TEHRAN</text>
+    <rect x="198" y="440" width="50" height="2" rx="1" fill="url(#sun)"/>
+    <text x="260" y="446" class="mono label" style="font-size:13px">BASED IN TORONTO</text>
+    <text x="460" y="446" class="mono label" style="font-size:13px;fill:#4f4e58">/  BUILDING SINCE 13</text>
   </g>
-
-  <!-- mascot -->
-  <g class="bob fb">
-    <circle class="glow fb" cx="1106" cy="142" r="46" fill="#fff6c4"/>
-    <image href="{{IMG:Rumy_Lightbulb.webp}}" x="830" y="88" width="320" height="320"/>
-  </g>
-
-  <!-- speech cloud -->
-  <g class="cloud fb">
-    <g stroke="#1a1a1a" stroke-width="6" fill="#1a1a1a">
-      <circle cx="684" cy="112" r="38"/><circle cx="730" cy="80" r="46"/><circle cx="786" cy="94" r="40"/>
-      <circle cx="808" cy="128" r="32"/><circle cx="746" cy="134" r="38"/><circle cx="694" cy="140" r="28"/>
-      <circle cx="838" cy="170" r="10"/><circle cx="856" cy="190" r="6"/>
-    </g>
-    <g fill="#fff">
-      <circle cx="684" cy="112" r="38"/><circle cx="730" cy="80" r="46"/><circle cx="786" cy="94" r="40"/>
-      <circle cx="808" cy="128" r="32"/><circle cx="746" cy="134" r="38"/><circle cx="694" cy="140" r="28"/>
-      <circle cx="838" cy="170" r="10"/><circle cx="856" cy="190" r="6"/>
-    </g>
-    <text x="746" y="102" text-anchor="middle" class="cloud-t">HEY,</text>
-    <text x="746" y="132" text-anchor="middle" class="cloud-t">I'M ARTIN!</text>
-  </g>
-
-  <!-- floating product chips -->
-  <g class="chipA fb">
-    <rect x="652" y="292" width="236" height="54" rx="15" fill="#1a1a1a"/>
-    <rect x="646" y="286" width="236" height="54" rx="15" fill="#fff" stroke="#1a1a1a" stroke-width="2.5"/>
-    <circle cx="674" cy="313" r="14" fill="#f5e070" stroke="#1a1a1a" stroke-width="2"/>
-    <path d="M667,313 l5,5 l9,-9" fill="none" stroke="#1a1a1a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <text x="698" y="309" class="chip-t">Maya · dishes tonight</text>
-    <text x="698" y="327" class="chip-s">auto-assigned · fair rotation</text>
-  </g>
-  <g class="chipB fb">
-    <rect x="922" y="422" width="226" height="54" rx="15" fill="#1a1a1a"/>
-    <rect x="916" y="416" width="226" height="54" rx="15" fill="#fff" stroke="#1a1a1a" stroke-width="2.5"/>
-    <circle cx="944" cy="443" r="14" fill="#f5e070" stroke="#1a1a1a" stroke-width="2"/>
-    <text x="944" y="449" text-anchor="middle" style="font-size:16px;font-weight:900" class="ink">$</text>
-    <text x="968" y="439" class="chip-t">Utilities $84 · split 3</text>
-    <text x="968" y="457" class="chip-s">everyone's settled up</text>
-  </g>
-
-  <!-- sparkles -->
-  <g transform="translate(1158 58)"><use href="#star" xlink:href="#star" class="spark fb" fill="#1a1a1a"/></g>
-  <g transform="translate(1164 330) scale(.8)"><use href="#star" xlink:href="#star" class="spark s2 fb" fill="#fff"/></g>
-  <g transform="translate(612 232) scale(.7)"><use href="#star" xlink:href="#star" class="spark s3 fb" fill="#e8c840"/></g>
-  <g transform="translate(560 112) scale(.9)"><use href="#star" xlink:href="#star" class="spark s4 fb" fill="#e8c840"/></g>
-  <g transform="translate(470 458) scale(.6)"><use href="#star" xlink:href="#star" class="spark s5 fb" fill="#1a1a1a"/></g>
 </svg>

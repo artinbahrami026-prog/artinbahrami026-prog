@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="The road so far: chess champion in Tehran, first business at 13, moved to Canada, taught myself to code, shovelled driveways to fund ARMO, graduated early, now building Rumy and studying at Schulich.">
+  <style>
+    {{FONT:serif-italic,mono,grotesk}}
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    .grot { font-family: 'Space Grotesk', sans-serif; }
+    .label { font-size: 15px; font-weight: 500; letter-spacing: 3.5px; fill: #8c8b96; }
+    .era { font-size: 13px; font-weight: 700; letter-spacing: 2.5px; }
+    .t { font-size: 21px; font-weight: 700; fill: #f3efe6; }
+    .s { font-size: 15px; font-weight: 400; fill: #8c8b96; }
+    .n { font-size: 13px; font-weight: 700; fill: #f3efe6; }
+    .fb { transform-box: fill-box; }
+
+    .lane { stroke-dasharray: 12 14; animation: lane 1.4s linear infinite; }
+    @keyframes lane { to { stroke-dashoffset: -26; } }
+
+    .stop { opacity: 0; animation: pop .7s cubic-bezier(.2,1.4,.4,1) both; }
+    .s1 { animation-delay: .2s; } .s2 { animation-delay: .4s; } .s3 { animation-delay: .6s; } .s4 { animation-delay: .8s; }
+    .s5 { animation-delay: 1s; } .s6 { animation-delay: 1.2s; } .s7 { animation-delay: 1.4s; } .s8 { animation-delay: 1.6s; }
+    @keyframes pop { from { opacity: 0; transform: translateY(16px); filter: blur(5px); } to { opacity: 1; transform: none; filter: blur(0); } }
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="1200" height="560" rx="28"/></clipPath>
+    <linearGradient id="era" gradientUnits="userSpaceOnUse" x1="0" y1="215" x2="0" y2="415">
+      <stop offset="0" stop-color="#f4a338"/><stop offset="1" stop-color="#7cc8ff"/>
+    </linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#f4a338" stop-opacity=".9"/><stop offset=".35" stop-color="#f07a5a" stop-opacity=".35"/><stop offset="1" stop-color="#f07a5a" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glowB"><stop offset="0" stop-color="#7cc8ff" stop-opacity=".16"/><stop offset="1" stop-color="#7cc8ff" stop-opacity="0"/></radialGradient>
+    <path id="road" d="M70,215 H1060 C1165,215 1165,415 1060,415 H120"/>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="1200" height="560" fill="#0b0c11"/>
+    <circle cx="1100" cy="520" r="360" fill="url(#glowB)"/>
+  </g>
+  <rect x=".75" y=".75" width="1198.5" height="558.5" rx="28" fill="none" stroke="#262733" stroke-width="1.5"/>
+
+  <text x="60" y="66" class="mono label">THE ROAD SO FAR</text>
+  <text x="1140" y="66" text-anchor="end" class="mono label" style="fill:#4f4e58">TEHRAN  ·  TORONTO</text>
+
+  <!-- road -->
+  <use href="#road" fill="none" stroke="#171821" stroke-width="22" stroke-linecap="round"/>
+  <use href="#road" fill="none" stroke="url(#era)" stroke-opacity=".35" stroke-width="2" stroke-linecap="round" transform="translate(0 -11)"/>
+  <use href="#road" fill="none" stroke="url(#era)" stroke-opacity=".35" stroke-width="2" stroke-linecap="round" transform="translate(0 11)"/>
+  <use href="#road" class="lane" fill="none" stroke="#f3efe6" stroke-opacity=".28" stroke-width="2"/>
+
+  <!-- traveler -->
+  <g>
+    <circle r="26" fill="url(#glow)"/>
+    <circle r="6" fill="#fff4dc"/>
+    <animateMotion dur="14s" repeatCount="indefinite" calcMode="linear"><mpath href="#road"/></animateMotion>
+  </g>
+
+  <!-- row 1: Tehran era -->
+  <g class="stop s1 fb">
+    <text x="150" y="118" text-anchor="middle" class="mono era" fill="#f4a338">TEHRAN</text>
+    <text x="150" y="148" text-anchor="middle" class="grot t">Chess champion</text>
+    <text x="150" y="172" text-anchor="middle" class="grot s">Regional title, two years running</text>
+    <circle cx="150" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
+    <text x="150" y="220" text-anchor="middle" class="mono n">01</text>
+  </g>
+  <g class="stop s2 fb">
+    <text x="410" y="118" text-anchor="middle" class="mono era" fill="#f4a338">AGE 13</text>
+    <text x="410" y="148" text-anchor="middle" class="grot t">First business</text>
+    <text x="410" y="172" text-anchor="middle" class="grot s">Sold jewellery at school and online</text>
+    <circle cx="410" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
+    <text x="410" y="220" text-anchor="middle" class="mono n">02</text>
+  </g>
+  <g class="stop s3 fb">
+    <text x="670" y="118" text-anchor="middle" class="mono era" fill="#f4a338">GRADE 8</text>
+    <text x="670" y="148" text-anchor="middle" class="grot t">Moved to Canada</text>
+    <text x="670" y="172" text-anchor="middle" class="grot s">Tehran to Toronto, at 14</text>
+    <circle cx="670" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
+    <text x="670" y="220" text-anchor="middle" class="mono n">03</text>
+  </g>
+  <g class="stop s4 fb">
+    <text x="930" y="118" text-anchor="middle" class="mono era" fill="#f4a338">HIGH SCHOOL</text>
+    <text x="930" y="148" text-anchor="middle" class="grot t">Taught myself to code</text>
+    <text x="930" y="172" text-anchor="middle" class="grot s">Broken screen, borrowed MacBook</text>
+    <circle cx="930" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
+    <text x="930" y="220" text-anchor="middle" class="mono n">04</text>
+  </g>
+
+  <!-- row 2: building -->
+  <g class="stop s5 fb">
+    <circle cx="930" cy="415" r="18" fill="#0b0c11" stroke="#7cc8ff" stroke-width="2.5"/>
+    <text x="930" y="420" text-anchor="middle" class="mono n">05</text>
+    <text x="930" y="468" text-anchor="middle" class="mono era" fill="#7cc8ff">WINTERS</text>
+    <text x="930" y="498" text-anchor="middle" class="grot t">Shovelled driveways</text>
+    <text x="930" y="522" text-anchor="middle" class="grot s">to fund my first product run</text>
+  </g>
+  <g class="stop s6 fb">
+    <circle cx="670" cy="415" r="18" fill="#0b0c11" stroke="#7cc8ff" stroke-width="2.5"/>
+    <text x="670" y="420" text-anchor="middle" class="mono n">06</text>
+    <text x="670" y="468" text-anchor="middle" class="mono era" fill="#7cc8ff">ARMO</text>
+    <text x="670" y="498" text-anchor="middle" class="grot t">Built a clothing brand</text>
+    <text x="670" y="522" text-anchor="middle" class="grot s">5-figure revenue, ~5 retail stores</text>
+  </g>
+  <g class="stop s7 fb">
+    <circle cx="410" cy="415" r="18" fill="#0b0c11" stroke="#7cc8ff" stroke-width="2.5"/>
+    <text x="410" y="420" text-anchor="middle" class="mono n">07</text>
+    <text x="410" y="468" text-anchor="middle" class="mono era" fill="#7cc8ff">JAN 2026</text>
+    <text x="410" y="498" text-anchor="middle" class="grot t">Graduated early</text>
+    <text x="410" y="522" text-anchor="middle" class="grot s">6 months ahead, to build full-time</text>
+  </g>
+  <g class="stop s8 fb">
+    <circle cx="150" cy="415" r="26" fill="none" stroke="#5ee38a" stroke-width="2">
+      <animate attributeName="r" values="18;34" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".9;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="415" r="18" fill="#0b0c11" stroke="#5ee38a" stroke-width="2.5"/>
+    <text x="150" y="420" text-anchor="middle" class="mono n">08</text>
+    <text x="150" y="468" text-anchor="middle" class="mono era" fill="#5ee38a">NOW</text>
+    <text x="150" y="498" text-anchor="middle" class="grot t">Rumy + Schulich</text>
+    <text x="150" y="522" text-anchor="middle" class="grot s">Co-founder / CEO, BBA student</text>
+  </g>
+</svg>
