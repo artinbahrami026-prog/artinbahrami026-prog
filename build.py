@@ -6,7 +6,8 @@ inside SVGs, so every font and image has to be embedded as a data URI.
 Placeholders:
   {{FONT:serif,mono}}  @font-face rules for the named fonts (see FONTS)
   {{IMG:file.webp}}    data URI for a file in assets/src/
-  {{W1}}..{{W4}}       highlighter widths used by src/rumy/hero.svg
+  {{BARCODE}}          a fake barcode for the boarding pass stub
+  {{W1}}..{{W4}}, {{WX}}  measured text offsets (see WIDTHS)
 
 Run: python3 build.py
 """
@@ -36,6 +37,19 @@ def data_uri(path):
     return f"data:{MIME[path.suffix]};base64," + base64.b64encode(path.read_bytes()).decode()
 
 
+def barcode(x=868, y=292, width=214, height=96, seed=2008):
+    """Deterministic fake barcode: bars of 1-4px with 1-3px gaps."""
+    rng, bars, cx = seed, [], x
+    while True:
+        rng = (rng * 1103515245 + 12345) % 2**31
+        w, gap = 1 + rng % 4, 1 + (rng >> 8) % 3
+        if cx + w > x + width:
+            break
+        bars.append(f'<rect x="{cx}" y="{y}" width="{w}" height="{height}"/>')
+        cx += w + gap
+    return '<g fill="#14151c">' + "".join(bars) + "</g>"
+
+
 def font_faces(names):
     rules = []
     for name in names.split(","):
@@ -51,6 +65,7 @@ for tpl in sorted(SRC.rglob("*.svg")):
     svg = tpl.read_text().replace("{{FONT}}", font_faces("nunito"))
     svg = re.sub(r"\{\{FONT:([^}]+)\}\}", lambda m: font_faces(m.group(1)), svg)
     svg = re.sub(r"\{\{IMG:([^}]+)\}\}", lambda m: data_uri(ART / m.group(1)), svg)
+    svg = svg.replace("{{BARCODE}}", barcode())
     for key, val in WIDTHS.items():
         svg = svg.replace("{{%s}}" % key, str(val))
     out = OUT / tpl.relative_to(SRC)

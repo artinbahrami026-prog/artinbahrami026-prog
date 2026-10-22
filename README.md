@@ -1,3 +1,5 @@
+<img src="./assets/boarding.svg" width="100%" alt="Boarding pass: Artin Bahrami, Tehran (IKA) to San Francisco (SFO) via Toronto (YYZ). Class: Founder. Now boarding." />
+
 <img src="./assets/hero.svg" width="100%" alt="Artin Bahrami. From Tehran, based in Toronto. Founder, product designer, self-taught engineer." />
 
 <br />
