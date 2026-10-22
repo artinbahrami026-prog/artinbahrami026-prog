@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-label="Off the keyboard: volleyball libero, 2nd at Canadian Nationals, Ontario All-Star, 2x Ontario champion, York University practice squad, 2x regional chess champion, DECA regional champion.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 330" width="1200" height="330" role="img" aria-label="Off the keyboard: volleyball libero, 2nd at Canadian Nationals, Ontario All-Star, 2x Ontario champion, York University practice squad, top libero in Ontario, DECA regional champion.">
   <style>
     {{FONT:serif,serif-italic,mono,grotesk}}
     .serif { font-family: 'Instrument Serif', serif; }
@@ -59,7 +59,7 @@
   <g class="stat a2 fb"><text x="620" y="150" class="serif num">2×</text><text x="622" y="176" class="mono cap">ONTARIO CHAMPION</text></g>
   <g class="stat a3 fb"><text x="820" y="150" class="serif num">All-Star</text><text x="822" y="176" class="mono cap">ONTARIO</text></g>
   <line x1="420" y1="206" x2="960" y2="206" stroke="#262733" stroke-width="1.5"/>
-  <g class="stat a4 fb"><text x="420" y="268" class="serif num">2×</text><text x="422" y="294" class="mono cap">REGIONAL CHESS, IRAN</text></g>
+  <g class="stat a4 fb"><text x="420" y="268" class="serif num">Top</text><text x="422" y="294" class="mono cap">LIBERO IN ONTARIO</text></g>
   <g class="stat a5 fb"><text x="620" y="268" class="serif num">DECA</text><text x="622" y="294" class="mono cap">REGIONAL CHAMPION</text></g>
   <g class="stat a6 fb"><text x="820" y="268" class="serif num">Pres.</text><text x="822" y="294" class="mono cap">DECA CHAPTER</text></g>
 

@@ -28,7 +28,7 @@ FONTS = {
 }
 
 # Highlighter widths under the rotating words in rumy/hero.svg (measured in a browser).
-WIDTHS = {"W1": 135, "W2": 94, "W3": 224, "W4": 283, "WX": 131}
+WIDTHS = {"W1": 135, "W2": 94, "W3": 224, "W4": 283, "WX": 131, "LX": 146, "SX": 208, "BX": 432}
 
 MIME = {".webp": "image/webp", ".png": "image/png", ".woff2": "font/woff2"}
 

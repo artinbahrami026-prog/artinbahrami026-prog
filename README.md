@@ -1,10 +1,10 @@
-<img src="./assets/boarding.svg" width="100%" alt="Boarding pass: Artin Bahrami, Tehran (IKA) to San Francisco (SFO) via Toronto (YYZ). Class: Founder. Now boarding." />
+<img src="./assets/boarding.svg" width="100%" alt="Boarding pass: Artin Bahrami, Toronto (YYZ) to San Francisco (SFO). Class: Founder. Boarding soon." />
 
-<img src="./assets/hero.svg" width="100%" alt="Artin Bahrami. From Tehran, based in Toronto. Founder, product designer, self-taught engineer." />
+<img src="./assets/hero.svg" width="100%" alt="Artin Bahrami. Based in Toronto, headed to San Francisco. Founder, product designer, self-taught engineer." />
 
 <br />
 
-I started my first business at 13, moved from Tehran to Toronto at 14, and taught myself to code on a laptop with a broken screen. I shovelled driveways to fund my first clothing run, graduated high school six months early to build full-time, and I'm now co-founding **[Rumy](https://rumyapp.com)** while studying business at **Schulich**.
+I started my first business at 13 and taught myself to code on a laptop with a broken screen. I shovelled driveways to fund my first clothing run, graduated high school six months early to build full-time, and I'm now co-founding **[Rumy](https://rumyapp.com)** while studying business at **Schulich**. Toronto today, San Francisco next.
 
 <br />
 
@@ -22,7 +22,7 @@ I started my first business at 13, moved from Tehran to Toronto at 14, and taugh
 
 <br />
 
-<img src="./assets/offcourt.svg" width="100%" alt="Off the keyboard: volleyball libero, chess and DECA" />
+<img src="./assets/offcourt.svg" width="100%" alt="Off the keyboard: volleyball libero and DECA" />
 
 <br />
 

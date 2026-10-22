@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="The road so far: chess champion in Tehran, first business at 13, moved to Canada, taught myself to code, shovelled driveways to fund ARMO, graduated early, now building Rumy and studying at Schulich.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" role="img" aria-label="The road so far: first business at 13, taught myself to code, shovelled driveways to fund ARMO, DECA regional champion, 2nd in Canada in volleyball, graduated early, now building Rumy and studying at Schulich.">
   <style>
     {{FONT:serif-italic,mono,grotesk}}
     .mono { font-family: 'JetBrains Mono', monospace; }
@@ -35,7 +35,7 @@
   <rect x=".75" y=".75" width="1198.5" height="558.5" rx="28" fill="none" stroke="#262733" stroke-width="1.5"/>
 
   <text x="60" y="66" class="mono label">THE ROAD SO FAR</text>
-  <text x="1140" y="66" text-anchor="end" class="mono label" style="fill:#4f4e58">TEHRAN  ·  TORONTO</text>
+  <text x="1140" y="66" text-anchor="end" class="mono label" style="fill:#4f4e58">TORONTO  ·  SAN FRANCISCO NEXT</text>
 
   <!-- road -->
   <use href="#road" fill="none" stroke="#171821" stroke-width="22" stroke-linecap="round"/>
@@ -50,50 +50,50 @@
     <animateMotion dur="14s" repeatCount="indefinite" calcMode="linear"><mpath href="#road"/></animateMotion>
   </g>
 
-  <!-- row 1: Tehran era -->
+  <!-- row 1 -->
   <g class="stop s1 fb">
-    <text x="150" y="118" text-anchor="middle" class="mono era" fill="#f4a338">TEHRAN</text>
-    <text x="150" y="148" text-anchor="middle" class="grot t">Chess champion</text>
-    <text x="150" y="172" text-anchor="middle" class="grot s">Regional title, two years running</text>
+    <text x="150" y="118" text-anchor="middle" class="mono era" fill="#f4a338">AGE 13</text>
+    <text x="150" y="148" text-anchor="middle" class="grot t">First business</text>
+    <text x="150" y="172" text-anchor="middle" class="grot s">Sold jewellery at school and online</text>
     <circle cx="150" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
     <text x="150" y="220" text-anchor="middle" class="mono n">01</text>
   </g>
   <g class="stop s2 fb">
-    <text x="410" y="118" text-anchor="middle" class="mono era" fill="#f4a338">AGE 13</text>
-    <text x="410" y="148" text-anchor="middle" class="grot t">First business</text>
-    <text x="410" y="172" text-anchor="middle" class="grot s">Sold jewellery at school and online</text>
+    <text x="410" y="118" text-anchor="middle" class="mono era" fill="#f4a338">HIGH SCHOOL</text>
+    <text x="410" y="148" text-anchor="middle" class="grot t">Taught myself to code</text>
+    <text x="410" y="172" text-anchor="middle" class="grot s">Broken screen, borrowed MacBook</text>
     <circle cx="410" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
     <text x="410" y="220" text-anchor="middle" class="mono n">02</text>
   </g>
   <g class="stop s3 fb">
-    <text x="670" y="118" text-anchor="middle" class="mono era" fill="#f4a338">GRADE 8</text>
-    <text x="670" y="148" text-anchor="middle" class="grot t">Moved to Canada</text>
-    <text x="670" y="172" text-anchor="middle" class="grot s">Tehran to Toronto, at 14</text>
+    <text x="670" y="118" text-anchor="middle" class="mono era" fill="#f4a338">WINTERS</text>
+    <text x="670" y="148" text-anchor="middle" class="grot t">Shovelled driveways</text>
+    <text x="670" y="172" text-anchor="middle" class="grot s">to fund my first product run</text>
     <circle cx="670" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
     <text x="670" y="220" text-anchor="middle" class="mono n">03</text>
   </g>
   <g class="stop s4 fb">
-    <text x="930" y="118" text-anchor="middle" class="mono era" fill="#f4a338">HIGH SCHOOL</text>
-    <text x="930" y="148" text-anchor="middle" class="grot t">Taught myself to code</text>
-    <text x="930" y="172" text-anchor="middle" class="grot s">Broken screen, borrowed MacBook</text>
+    <text x="930" y="118" text-anchor="middle" class="mono era" fill="#f4a338">ARMO</text>
+    <text x="930" y="148" text-anchor="middle" class="grot t">Built a clothing brand</text>
+    <text x="930" y="172" text-anchor="middle" class="grot s">5-figure revenue, ~5 retail stores</text>
     <circle cx="930" cy="215" r="18" fill="#0b0c11" stroke="#f4a338" stroke-width="2.5"/>
     <text x="930" y="220" text-anchor="middle" class="mono n">04</text>
   </g>
 
-  <!-- row 2: building -->
+  <!-- row 2 -->
   <g class="stop s5 fb">
     <circle cx="930" cy="415" r="18" fill="#0b0c11" stroke="#7cc8ff" stroke-width="2.5"/>
     <text x="930" y="420" text-anchor="middle" class="mono n">05</text>
-    <text x="930" y="468" text-anchor="middle" class="mono era" fill="#7cc8ff">WINTERS</text>
-    <text x="930" y="498" text-anchor="middle" class="grot t">Shovelled driveways</text>
-    <text x="930" y="522" text-anchor="middle" class="grot s">to fund my first product run</text>
+    <text x="930" y="468" text-anchor="middle" class="mono era" fill="#7cc8ff">DECA</text>
+    <text x="930" y="498" text-anchor="middle" class="grot t">Regional champion</text>
+    <text x="930" y="522" text-anchor="middle" class="grot s">Chapter president, entrepreneurship</text>
   </g>
   <g class="stop s6 fb">
     <circle cx="670" cy="415" r="18" fill="#0b0c11" stroke="#7cc8ff" stroke-width="2.5"/>
     <text x="670" y="420" text-anchor="middle" class="mono n">06</text>
-    <text x="670" y="468" text-anchor="middle" class="mono era" fill="#7cc8ff">ARMO</text>
-    <text x="670" y="498" text-anchor="middle" class="grot t">Built a clothing brand</text>
-    <text x="670" y="522" text-anchor="middle" class="grot s">5-figure revenue, ~5 retail stores</text>
+    <text x="670" y="468" text-anchor="middle" class="mono era" fill="#7cc8ff">VOLLEYBALL</text>
+    <text x="670" y="498" text-anchor="middle" class="grot t">2nd in Canada</text>
+    <text x="670" y="522" text-anchor="middle" class="grot s">National championship, as libero</text>
   </g>
   <g class="stop s7 fb">
     <circle cx="410" cy="415" r="18" fill="#0b0c11" stroke="#7cc8ff" stroke-width="2.5"/>
