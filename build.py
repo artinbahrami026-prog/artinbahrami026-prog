@@ -6,7 +6,7 @@ inside SVGs, so every font and image has to be embedded as a data URI.
 Placeholders:
   {{FONT:serif,mono}}  @font-face rules for the named fonts (see FONTS)
   {{IMG:file.webp}}    data URI for a file in assets/src/
-  {{BARCODE}}          a fake barcode for the boarding pass stub
+  {{BARCODE}}, {{AZTEC}}  fake barcode / 2D code for the boarding pass stub
   {{W1}}..{{W4}}, {{WX}}  measured text offsets (see WIDTHS)
 
 Run: python3 build.py
@@ -50,6 +50,22 @@ def barcode(x=868, y=292, width=214, height=96, seed=2008):
     return '<g fill="#14151c">' + "".join(bars) + "</g>"
 
 
+def aztec(x=872, y=198, n=33, size=4, seed=2008):
+    """Deterministic Aztec-style 2D code: bullseye in the middle, noise around it."""
+    c, rng, cells = n // 2, seed, []
+    for r in range(n):
+        for col in range(n):
+            ring = max(abs(r - c), abs(col - c))
+            if ring <= 6:
+                on = ring % 2 == 0 or (ring == 6 and (r + col) % 2 == 0)
+            else:
+                rng = (rng * 1103515245 + 12345) % 2**31
+                on = (rng >> 16) % 2 == 0
+            if on:
+                cells.append(f'<rect x="{x + col * size}" y="{y + r * size}" width="{size}" height="{size}"/>')
+    return '<g fill="#1b1b1b">' + "".join(cells) + "</g>"
+
+
 def font_faces(names):
     rules = []
     for name in names.split(","):
@@ -65,7 +81,7 @@ for tpl in sorted(SRC.rglob("*.svg")):
     svg = tpl.read_text().replace("{{FONT}}", font_faces("nunito"))
     svg = re.sub(r"\{\{FONT:([^}]+)\}\}", lambda m: font_faces(m.group(1)), svg)
     svg = re.sub(r"\{\{IMG:([^}]+)\}\}", lambda m: data_uri(ART / m.group(1)), svg)
-    svg = svg.replace("{{BARCODE}}", barcode())
+    svg = svg.replace("{{BARCODE}}", barcode()).replace("{{AZTEC}}", aztec())
     for key, val in WIDTHS.items():
         svg = svg.replace("{{%s}}" % key, str(val))
     out = OUT / tpl.relative_to(SRC)
