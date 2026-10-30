@@ -15,6 +15,8 @@ import base64
 import pathlib
 import re
 
+import ascii_pass
+
 ROOT = pathlib.Path(__file__).parent
 SRC, OUT, ART = ROOT / "src", ROOT / "assets", ROOT / "assets" / "src"
 
@@ -82,6 +84,14 @@ for tpl in sorted(SRC.rglob("*.svg")):
     svg = re.sub(r"\{\{FONT:([^}]+)\}\}", lambda m: font_faces(m.group(1)), svg)
     svg = re.sub(r"\{\{IMG:([^}]+)\}\}", lambda m: data_uri(ART / m.group(1)), svg)
     svg = svg.replace("{{BARCODE}}", barcode()).replace("{{AZTEC}}", aztec())
+    if "{{ASCII}}" in svg:
+        cw = 9.6  # JetBrains Mono advance at 16px
+        rows, done = ascii_pass.svg(x=120, y=128, line_height=22, start=2.0, step=0.07)
+        svg = svg.replace("{{ASCII}}", rows)
+        for key, val in {"PLANE_IN": f"{2.0 + 7 * 0.07:.2f}", "DONE": f"{done + 0.2:.2f}",
+                         "PX": f"{120 + 24 * cw:.1f}", "PY1": 128 + 6 * 22, "PY2": 128 + 7 * 22,
+                         "CX": f"{60 + 17 * cw:.1f}", "CW": f"{27 * cw:.1f}", "LX2": f"{60 + 32 * cw + 4:.1f}"}.items():
+            svg = svg.replace("{{%s}}" % key, str(val))
     for key, val in WIDTHS.items():
         svg = svg.replace("{{%s}}" % key, str(val))
     out = OUT / tpl.relative_to(SRC)

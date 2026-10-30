@@ -1,81 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" role="img" aria-label="Boarding pass. Passenger Bahrami, Artin. Toronto (YYZ) to San Francisco (SFO). Flight AB 2008, seat 01A. Boarding soon.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-label="A terminal prints a boarding pass in text characters. Passenger Bahrami, Artin. Toronto (YYZ) to San Francisco (SFO). Flight AB 2008, seat 01A. Boarding soon.">
   <style>
-    {{FONT:mono,grotesk}}
-    .g { font-family: 'Space Grotesk', sans-serif; }
-    .m { font-family: 'JetBrains Mono', monospace; }
-    .lab { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; fill: #8a867c; }
-    .val { font-size: 22px; font-weight: 700; fill: #1b1b1b; }
-    .code { font-size: 96px; font-weight: 700; fill: #1b1b1b; letter-spacing: -3px; }
-    .city { font-size: 14px; font-weight: 500; fill: #55524b; }
-    .fine { font-size: 11px; fill: #a19d92; letter-spacing: .5px; }
-    .fb { transform-box: fill-box; }
+    {{FONT:mono}}
+    text { font-family: 'JetBrains Mono', monospace; font-size: 16px; fill: #c9d1d9; }
+    .frame { fill: #484f58; }
+    .dim { fill: #7d8590; }
+    .val { fill: #e6edf3; font-weight: 700; }
+    .head { fill: #e6edf3; font-weight: 800; }
+    .from { fill: #79c0ff; font-weight: 700; }
+    .to { fill: #f0883e; font-weight: 700; }
+    .live { fill: #3fb950; font-weight: 700; }
+    .prompt { fill: #3fb950; font-weight: 700; }
+    .path { fill: #79c0ff; font-weight: 700; }
+    .title { font-size: 13px; fill: #7d8590; }
 
-    /* feeds out of the slot in short pulls, like a gate printer */
-    .print { animation: print 2s linear .2s both; }
-    @keyframes print {
-      0% { transform: translateY(-360px); }
-      20% { transform: translateY(-270px); } 26% { transform: translateY(-270px); }
-      46% { transform: translateY(-180px); } 52% { transform: translateY(-180px); }
-      72% { transform: translateY(-90px); } 78% { transform: translateY(-90px); }
-      100% { transform: translateY(0); }
-    }
-    .live { animation: blink 1.4s ease-in-out 2.2s infinite; }
-    @keyframes blink { 50% { opacity: .2; } }
-    .plane { animation: nudge 3s ease-in-out 2.2s infinite; }
-    @keyframes nudge { 0%,100% { transform: translateX(0); } 50% { transform: translateX(10px); } }
+    /* the command types itself: a cover slides off one character at a time */
+    .typing { animation: type 1.3s steps(27) .5s both; }
+    @keyframes type { from { transform: translateX(0); } to { transform: translateX({{CW}}px); } }
+    .row { opacity: 0; animation: on .01s linear both; }
+    @keyframes on { to { opacity: 1; } }
+    .plane { opacity: 0; animation: on .01s linear {{PLANE_IN}}s both, fly 3.2s ease-in-out {{PLANE_IN}}s infinite; }
+    @keyframes fly { 0% { transform: translateX(0); } 50% { transform: translateX(67px); } 100% { transform: translateX(0); } }
+    .blink { opacity: 0; animation: on .01s linear {{DONE}}s both, cursor 1s steps(1) {{DONE}}s infinite; }
+    @keyframes cursor { 50% { opacity: 0; } }
+    .last { opacity: 0; animation: on .01s linear {{DONE}}s both; }
+    .first-cursor { animation: hideCursor .01s linear 1.85s both; }
+    @keyframes hideCursor { to { opacity: 0; } }
+    .blink-early { animation: cursor 1s steps(1) infinite; }
   </style>
   <defs>
-    <clipPath id="card"><rect width="1200" height="430" rx="24"/></clipPath>
-    <clipPath id="out"><rect x="0" y="58" width="1200" height="372"/></clipPath>
-    <clipPath id="paper"><rect x="90" y="58" width="1020" height="336" rx="14"/></clipPath>
-    <path id="plane" d="M11,0 L-4,-2.2 L-9,-9 L-12,-9 L-8,-2 L-13,-1.6 L-15.5,-5 L-17,-5 L-15.5,0 L-17,5 L-15.5,5 L-13,1.6 L-8,2 L-12,9 L-9,9 L-4,2.2 Z"/>
+    <clipPath id="win"><rect x="20" y="10" width="1160" height="500" rx="14"/></clipPath>
   </defs>
 
-  <g clip-path="url(#card)"><rect width="1200" height="430" fill="#0d1117"/></g>
+  <!-- window -->
+  <rect x="20" y="10" width="1160" height="500" rx="14" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+  <g clip-path="url(#win)">
+    <rect x="20" y="10" width="1160" height="40" fill="#161b22"/>
+    <line x1="20" y1="50" x2="1180" y2="50" stroke="#30363d"/>
+  </g>
+  <circle cx="46" cy="30" r="6.5" fill="#ff5f57"/><circle cx="68" cy="30" r="6.5" fill="#febc2e"/><circle cx="90" cy="30" r="6.5" fill="#28c840"/>
+  <text x="600" y="35" text-anchor="middle" class="title">artin@github: ~/boarding</text>
 
-  <g clip-path="url(#out)">
-    <g class="print fb">
-      <rect x="94" y="64" width="1020" height="336" rx="14" fill="#000" opacity=".35"/>
-      <g clip-path="url(#paper)">
-        <rect x="90" y="58" width="1020" height="336" fill="#f4f1ea"/>
-
-        <!-- header -->
-        <text x="122" y="104" class="g" style="font-size:15px;font-weight:700;letter-spacing:3px;fill:#1b1b1b">BOARDING PASS</text>
-        <circle class="live" cx="676" cy="99" r="5" fill="#2f9e5b"/>
-        <text x="690" y="104" class="g" style="font-size:13px;font-weight:700;letter-spacing:2px;fill:#2f9e5b">BOARDING SOON</text>
-        <line x1="122" y1="124" x2="810" y2="124" stroke="#1b1b1b" stroke-width="2"/>
-
-        <!-- passenger -->
-        <text x="122" y="158" class="m lab">PASSENGER</text>
-        <text x="122" y="186" class="g val">BAHRAMI / ARTIN</text>
-
-        <!-- route -->
-        <text x="122" y="226" class="m lab">FROM</text>
-        <text x="116" y="306" class="g code">YYZ</text>
-        <text x="122" y="330" class="g city">Toronto</text>
-        <text x="600" y="226" class="m lab">TO</text>
-        <text x="594" y="306" class="g code">SFO</text>
-        <text x="600" y="330" class="g city">San Francisco</text>
-        <line x1="340" y1="272" x2="560" y2="272" stroke="#1b1b1b" stroke-opacity=".25" stroke-width="1.5" stroke-dasharray="4 6"/>
-        <g transform="translate(440 272)"><use href="#plane" class="plane" fill="#1b1b1b"/></g>
-
-        <!-- details -->
-        <line x1="122" y1="352" x2="810" y2="352" stroke="#1b1b1b" stroke-opacity=".12"/>
-        <text x="122" y="374" class="fine m">FLIGHT  <tspan fill="#1b1b1b" font-weight="700">AB 2008</tspan>     DATE  <tspan fill="#1b1b1b" font-weight="700">SOON</tspan>     GATE  <tspan fill="#1b1b1b" font-weight="700">TBA</tspan>     SEAT  <tspan fill="#1b1b1b" font-weight="700">01A</tspan>     ZONE  <tspan fill="#1b1b1b" font-weight="700">1</tspan></text>
-
-        <!-- stub -->
-        <line x1="840" y1="58" x2="840" y2="394" stroke="#1b1b1b" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="3 6"/>
-        <text x="872" y="104" class="m lab">AB 2008</text>
-        <text x="872" y="144" class="g" style="font-size:17px;font-weight:700;fill:#1b1b1b">BAHRAMI / ARTIN</text>
-        <text x="872" y="170" class="g" style="font-size:15px;font-weight:500;fill:#55524b">YYZ  to  SFO  ·  Seat 01A</text>
-        {{AZTEC}}
-        <text x="872" y="374" class="fine m">SEQ 001</text>
-      </g>
-      <circle cx="840" cy="58" r="12" fill="#0d1117"/>
-      <circle cx="840" cy="394" r="12" fill="#0d1117"/>
-    </g>
+  <!-- command -->
+  <text x="60" y="90" xml:space="preserve"><tspan class="prompt">artin@github</tspan> <tspan class="path">~</tspan> $ ./board --from YYZ --to SFO</text>
+  <g class="typing">
+    <rect x="{{CX}}" y="72" width="{{CW}}" height="24" fill="#0d1117"/>
+    <rect class="first-cursor" x="{{CX}}" y="74" width="10" height="20" fill="#c9d1d9"/>
   </g>
 
-  <!-- printer slot -->
-  <rect x="70" y="46" width="1060" height="14" rx="7" fill="#05070a" stroke="#30363d"/>
+  <!-- ticket, printed row by row -->
+  <g>
+    {{ASCII}}
+  </g>
+
+  <!-- the plane, drawn over the gap between YYZ and SFO -->
+  <g class="plane">
+    <text x="{{PX}}" y="{{PY1}}" class="val" xml:space="preserve">    __|__</text>
+    <text x="{{PX}}" y="{{PY2}}" class="val" xml:space="preserve">--o--(_)--o--</text>
+  </g>
+
+  <!-- next prompt -->
+  <text x="60" y="490" class="last" xml:space="preserve"><tspan class="prompt">artin@github</tspan> <tspan class="path">~</tspan> $ <tspan class="dim"># see you in SF</tspan></text>
+  <rect class="blink" x="{{LX2}}" y="474" width="10" height="20" fill="#c9d1d9"/>
 </svg>
